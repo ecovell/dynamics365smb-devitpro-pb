@@ -50,6 +50,7 @@ On the other hand, if someone gained access to the drive via a network a share o
 
 With TDE alone, the database files themselves are encrypted (as well as backup files of the TDE-encrypted databases). Therefore, if either file is copied or stolen via a network, as in the above example, the attacker cannot read it. But if the attacker gains access to the whole drive, including SQL Server, he can start SQL Server and read the data using SQL, because SQL Server is doing the decryption for him. Now if both BitLocker and TDE are used concurrently, both data theft vectors are mitigated.
 Both technologies complement each other, and it is recommended that you use BitLocker together with TDE for defense in depth.
+TDE can store crypographic keys to an external system (ie. HSM - Hardware Security Module) using the Microsoft EKM which provide maximum security. 
 
 ## Performance impact
 
